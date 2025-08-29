@@ -12,12 +12,20 @@ function calculate() {
     const num1 = parseFloat(num1Input.value)
     const num2 = parseFloat(num2Input.value)
     const operator = operatorSelect.value;
+    
 
     let result
     if( operator === "+") {
         result = num1 + num2
+    } else if( operator === "-") {
+        result = num1 - num2
+    } else if( operator === "*") {
+        result = num1 * num2
+    } else {
+        result = num1 / num2
     }
     
+
     // Step 3 - update the result span with the result of the calculation
     resultSpan.innerText = result;
 }
